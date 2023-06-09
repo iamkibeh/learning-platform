@@ -46,3 +46,7 @@ group :development do
   # gem "spring"
 end
 
+# user authentication gem
+gem "devise"
+gem "devise-jwt"
+gem "jsonapi-serializer"
