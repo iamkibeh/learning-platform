@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    registrationS: 'users/registrations'},
-    path: 'auth', 
-    path_names: {
-      sign_in: 'login',
-      sign_out: 'logout',
-      registration: 'signup'
-    }
+  get '/current_user', to: 'current_user#index'
+ devise_for :users, controllers: {
+  sessions: 'users/sessions',
+  registrations: 'users/registrations',
+  passwords: 'users/passwords',
+  confirmations: 'users/confirmations'
+  },
+  path: 'auth',
+  path_names: {
+    sign_in: 'login',
+    sign_out: 'logout',
+    registration: 'signup'
+  }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
