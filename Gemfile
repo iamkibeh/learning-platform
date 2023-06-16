@@ -49,4 +49,4 @@ end
 # user authentication gem
 gem "devise"
 gem "devise-jwt"
-gem "jsonapi-serializer"
+gem 'active_model_serializers', '~> 0.10.13'
